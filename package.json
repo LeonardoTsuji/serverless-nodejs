@@ -1,0 +1,15 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "npm uninstall sharp && npm install --platform=linux --arch=x64 --target=18.0.0 sharp",
+    "deploy": "serverless deploy",
+    "postinstall": "npm uninstall sharp && npm install sharp"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.391.0",
+    "sharp": "^0.32.5"
+  }
+}
